@@ -18,6 +18,22 @@ const ProjectsSection = () => {
       technologies: ['Python', 'Django', 'Flutter Flow', 'Bubble', 'APIs REST'],
       bgColor: 'bg-gradient-to-br from-orange-500 to-red-600',
       textColor: 'text-white'
+    },
+    {
+      id: '03',
+      title: 'Fourmaq Lanc',
+      description: 'Solução responsável por automatizar e gerenciar o lançamento de notas fiscais. Facilita o gerencimaneto de notas fiscais emitidas por terceitos, otimizando o processo para o setor do agronegócio.',
+      technologies: ['Django', 'Python', 'Playwright', 'APIs REST'],
+      bgColor: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      textColor: 'text-white'
+    },
+    {
+      id: '04',
+      title: 'Automatização de Relatórios',
+      description: 'Solução responsável por automatizar a geração de relatórios de projetos ambientais. Utiliza técnicas de substituição de variáveis para criar relatórios personalizados e eficientes.',
+      technologies: ['Streamlit', 'Python', 'Docx', 'Pandas'],
+      bgColor: 'bg-gradient-to-br from-yellow-500 to-red-500',
+      textColor: 'text-white'
     }
   ];
 
@@ -60,7 +76,7 @@ const ProjectsSection = () => {
 
         {/* Featured Projects */}
         <div className="space-y-12 mb-20">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}

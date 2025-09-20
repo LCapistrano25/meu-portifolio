@@ -97,7 +97,7 @@ const HeroSection = () => {
             <div className="relative">
               {/* Decorative frame */}
               <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_#000000] transition-all duration-200 hover:shadow-[12px_12px_0px_0px_#000000] hover:translate-x-[-2px] hover:translate-y-[-2px] w-80 h-80 flex items-center justify-center">
-                <span className="text-8xl font-black gradient-text">LC</span>
+                <img src="/src/assets/meu.jpg" alt="Foto de Leonardo Capistrano" className="w-32 h-32 rounded-full" />
               </div>
               
               {/* Decorative circles around the frame */}
