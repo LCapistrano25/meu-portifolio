@@ -115,8 +115,8 @@ const ProjectsSection = () => {
               projectId={project.id}
               problema={project.problema}
               solucao={project.solucao}
-              onExternalClick={(event) => window.open(project.link, '_blank') && event.stopPropagation()}
-              onGithubClick={(event) => window.open(project.git, '_blank') && event.stopPropagation()}
+              onExternalClick={project.link ? (event) => window.open(project.link, '_blank') && event.stopPropagation() : null}
+              onGithubClick={project.git ? (event) => window.open(project.git, '_blank') && event.stopPropagation() : null}
             />
           ))}
         </div>
