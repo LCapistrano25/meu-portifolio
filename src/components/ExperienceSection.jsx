@@ -14,7 +14,7 @@ const ExperienceSection = () => {
         'Criou automações de processos',
         'Implementou APIs REST'
       ],
-      color: 'bg-[#00bcd4]'
+      color: 'bg-[var(--primary)]'
     },
     {
       title: 'Jovem Aprendiz',
@@ -27,7 +27,7 @@ const ExperienceSection = () => {
         'Desenvolveu primeiro projeto XPLS',
         'Demonstrou potencial técnico'
       ],
-      color: 'bg-[#2196f3]'
+      color: 'bg-[var(--accent)]'
     },
     {
       title: 'Estudante de Engenharia de Software',
@@ -40,7 +40,7 @@ const ExperienceSection = () => {
         'Projetos acadêmicos',
         'Base teórica sólida'
       ],
-      color: 'bg-[#4caf50]'
+      color: 'bg-[var(--primary)]'
     },
     {
       title: 'Técnico em Agronegócio',
@@ -53,12 +53,12 @@ const ExperienceSection = () => {
         'Conhecimento em agronegócio',
         'Base em empreendedorismo'
       ],
-      color: 'bg-[#ff9800]'
+      color: 'bg-[var(--accent)]'
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-[#faf9f6] relative overflow-hidden">
+    <section id="experience" className="py-20 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute w-24 h-24 bg-[var(--accent)] rounded-full border-4 border-black top-10 left-10 lg:z-auto -z-10"></div>
       <div className="absolute w-16 h-16 bg-[var(--primary)] rounded-full border-4 border-black bottom-10 right-20 lg:z-auto -z-10"></div>
@@ -67,7 +67,7 @@ const ExperienceSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white border-4 border-black rounded-full px-6 py-3 font-bold shadow-[4px_4px_0px_0px_#000000] mb-8">
-            <Briefcase className="w-5 h-5 text-[#2196f3]" />
+            <Briefcase className="w-5 h-5 text-[var(--primary)]" />
             Jornada Profissional
           </div>
           

@@ -30,7 +30,7 @@ const SkillsSection = () => {
         icon: '🐍',
         name: 'Python',
         level: 'Avançado',
-        levelColor: 'bg-[#e91e63]',
+        levelColor: 'bg-[var(--primary)]',
         description: 'Automações e tratamento de dados',
         stars: 4
       },
@@ -38,7 +38,7 @@ const SkillsSection = () => {
         icon: '🌐',
         name: 'Django',
         level: 'Avançado',
-        levelColor: 'bg-[#e91e63]',
+        levelColor: 'bg-[var(--primary)]',
         description: 'Framework para APIs e aplicações web',
         stars: 4
       },
@@ -46,7 +46,7 @@ const SkillsSection = () => {
         icon: '📊',
         name: 'Pandas',
         level: 'Intermediário',
-        levelColor: 'bg-[#00bcd4]',
+        levelColor: 'bg-[var(--accent)]',
         description: 'Análise e manipulação de dados',
         stars: 3
       },
@@ -54,7 +54,7 @@ const SkillsSection = () => {
         icon: '🔢',
         name: 'NumPy',
         level: 'Intermediário',
-        levelColor: 'bg-[#00bcd4]',
+        levelColor: 'bg-[var(--accent)]',
         description: 'Computação científica e arrays',
         stars: 3
       }
@@ -64,7 +64,7 @@ const SkillsSection = () => {
         icon: '📱',
         name: 'Flutter Flow',
         level: 'Intermediário',
-        levelColor: 'bg-[#00bcd4]',
+        levelColor: 'bg-[var(--accent)]',
         description: 'Desenvolvimento mobile no-code',
         stars: 3
       },
@@ -72,7 +72,7 @@ const SkillsSection = () => {
         icon: '💧',
         name: 'Bubble',
         level: 'Intermediário',
-        levelColor: 'bg-[#00bcd4]',
+        levelColor: 'bg-[var(--accent)]',
         description: 'Aplicações web no-code',
         stars: 3
       }
@@ -82,7 +82,7 @@ const SkillsSection = () => {
         icon: '📄',
         name: 'PDF Processing',
         level: 'Avançado',
-        levelColor: 'bg-[#e91e63]',
+        levelColor: 'bg-[var(--primary)]',
         description: 'Extração e processamento de PDFs',
         stars: 4
       },
@@ -90,7 +90,7 @@ const SkillsSection = () => {
         icon: '📊',
         name: 'Excel/Planilhas',
         level: 'Avançado',
-        levelColor: 'bg-[#e91e63]',
+        levelColor: 'bg-[var(--primary)]',
         description: 'Automação de planilhas',
         stars: 4
       }
@@ -100,7 +100,7 @@ const SkillsSection = () => {
         icon: '🔧',
         name: 'Git',
         level: 'Intermediário',
-        levelColor: 'bg-[#00bcd4]',
+        levelColor: 'bg-[var(--accent)]',
         description: 'Controle de versão',
         stars: 3
       },
@@ -108,7 +108,7 @@ const SkillsSection = () => {
         icon: '🖥️',
         name: 'VS Code',
         level: 'Avançado',
-        levelColor: 'bg-[#e91e63]',
+        levelColor: 'bg-[var(--primary)]',
         description: 'Editor de código principal',
         stars: 4
       }
@@ -139,7 +139,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-[#faf9f6] relative overflow-hidden">
+    <section id="skills" className="py-20 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute w-20 h-20 bg-[var(--accent)] rounded-full border-4 border-black top-10 left-20 lg:z-auto -z-10"></div>
       <div className="absolute w-16 h-16 bg-[var(--primary)] rounded-full border-4 border-black bottom-10 right-10 lg:z-auto -z-10"></div>

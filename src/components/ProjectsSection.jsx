@@ -8,7 +8,7 @@ const ProjectsSection = () => {
       title: 'XPLS',
       description: 'Sistema de automação para otimizar o processo de montagem de planilhas para plano de saúde. Extrai e organiza automaticamente dados de arquivos PDF, tornando o processo mais ágil e preciso.',
       technologies: ['Python', 'Pandas', 'NumPy', 'PDF Processing'],
-      bgColor: 'bg-gradient-to-br from-green-500 to-blue-600',
+      bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white'
     },
     {
@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       title: 'Fourmaq Connect',
       description: 'Solução inovadora para sistema de reservas de máquinas. Permite reservas pelo celular com gestão ágil e eficiente pela plataforma web, organizando todo o processo para o agronegócio.',
       technologies: ['Python', 'Django', 'Flutter Flow', 'Bubble', 'APIs REST'],
-      bgColor: 'bg-gradient-to-br from-orange-500 to-red-600',
+      bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white'
     },
     {
@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       title: 'Fourmaq Lanc',
       description: 'Solução responsável por automatizar e gerenciar o lançamento de notas fiscais. Facilita o gerencimaneto de notas fiscais emitidas por terceitos, otimizando o processo para o setor do agronegócio.',
       technologies: ['Django', 'Python', 'Playwright', 'APIs REST'],
-      bgColor: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white'
     },
     {
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       title: 'Automatização de Relatórios',
       description: 'Solução responsável por automatizar a geração de relatórios de projetos ambientais. Utiliza técnicas de substituição de variáveis para criar relatórios personalizados e eficientes.',
       technologies: ['Streamlit', 'Python', 'Docx', 'Pandas'],
-      bgColor: 'bg-gradient-to-br from-yellow-500 to-red-500',
+      bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white'
     }
   ];
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-[#faf9f6] relative overflow-hidden">
+    <section id="projects" className="py-20 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute w-32 h-32 bg-[var(--accent)] rounded-full border-4 border-black top-20 right-10 lg:z-auto -z-10"></div>
       <div className="absolute w-20 h-20 bg-[var(--primary)] rounded-full border-4 border-black bottom-20 left-10 lg:z-auto -z-10"></div>

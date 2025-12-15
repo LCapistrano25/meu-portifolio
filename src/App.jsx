@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#faf9f6]">
+    <div className="min-h-screen bg-white">
       <HeroSection />
       <AboutSection />
       <SkillsSection />

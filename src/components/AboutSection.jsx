@@ -4,22 +4,22 @@ import { StatCard, EmojiCard } from './ui/brutalist-card';
 const AboutSection = () => {
   const stats = [
     {
-      icon: <Target className="w-8 h-8 text-[#00bcd4]" />,
+      icon: <Target className="w-8 h-8 text-[var(--primary)]" />,
       number: "2+",
       label: "Projetos Principais"
     },
     {
-      icon: <Zap className="w-8 h-8 text-[#2196f3]" />,
+      icon: <Zap className="w-8 h-8 text-[var(--primary)]" />,
       number: "2+",
       label: "Anos de Experiência"
     },
     {
-      icon: <Heart className="w-8 h-8 text-[#e91e63]" />,
+      icon: <Heart className="w-8 h-8 text-[var(--primary)]" />,
       number: "19",
       label: "Anos de Idade"
     },
     {
-      icon: <Bot className="w-8 h-8 text-[#9c27b0]" />,
+      icon: <Bot className="w-8 h-8 text-[var(--primary)]" />,
       number: "1",
       label: "Empresa Atual"
     }
@@ -45,7 +45,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-[#faf9f6] relative overflow-hidden">
+    <section id="about" className="py-20 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute w-24 h-24 bg-[var(--primary)] rounded-full border-4 border-black top-20 left-10 lg:z-auto -z-10"></div>
       <div className="absolute w-16 h-16 bg-[var(--accent)] rounded-full border-4 border-black bottom-20 right-20 lg:z-auto -z-10"></div>
@@ -55,7 +55,7 @@ const AboutSection = () => {
           {/* Left side - About content */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-white border-4 border-black rounded-full px-6 py-3 font-bold shadow-[4px_4px_0px_0px_#000000]">
-              <Heart className="w-5 h-5 text-[#e91e63]" />
+              <Heart className="w-5 h-5 text-[var(--primary)]" />
               Sobre Mim
             </div>
             
