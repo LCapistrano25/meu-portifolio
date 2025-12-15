@@ -140,9 +140,14 @@ const ExperienceSection = () => {
               >
                 Entre em Contato
               </a>
-              <button className="bg-transparent border-4 border-white text-white px-8 py-4 rounded-2xl font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all">
+              <a 
+                href="https://drive.google.com/file/d/1QYVdcpLXMDQ042Jdy1oG7I4RESEBIPy1/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-transparent text-white px-8 py-4 rounded-2xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all"
+              >
                 Ver Currículo
-              </button>
+              </a>
             </div>
           </div>
         </div>
