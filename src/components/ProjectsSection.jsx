@@ -11,7 +11,9 @@ const ProjectsSection = () => {
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white',
       problema: 'Processo manual e demorado de montagem de planilhas para planos de saúde, com alta taxa de erros humanos e consumo excessivo de tempo operacional.',
-      solucao: 'Desenvolvemos um sistema automatizado que extrai dados de PDFs, processa as informações e monta as planilhas automaticamente, reduzindo o tempo em 80% e eliminando erros de digitação.'
+      solucao: 'Desenvolvemos um sistema automatizado que extrai dados de PDFs, processa as informações e monta as planilhas automaticamente, reduzindo o tempo em 80% e eliminando erros de digitação.',
+      link: '',
+      git: ''
     },
     {
       id: '02',
@@ -21,7 +23,9 @@ const ProjectsSection = () => {
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white',
       problema: 'Gestão manual de reservas de máquinas agrícolas causava conflitos de agendamento, perda de dados e dificuldade de acesso para usuários remotos.',
-      solucao: 'Criamos uma plataforma integrada com app mobile para reservas e painel web para gestão, permitindo controle centralizado, notificações em tempo real e histórico completo de utilizações.'
+      solucao: 'Criamos uma plataforma integrada com app mobile para reservas e painel web para gestão, permitindo controle centralizado, notificações em tempo real e histórico completo de utilizações.',
+      link: 'https://play.google.com/store/apps/details?id=com.mycompany.fourmaqconnectx',
+      git: ''
     },
     {
       id: '03',
@@ -31,17 +35,33 @@ const ProjectsSection = () => {
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white',
       problema: 'Lançamento manual de notas fiscais de terceiros era propenso a erros, demorado e criava inconsistências nos registros contábeis da empresa.',
-      solucao: 'Implementamos um sistema que automatiza a captura, validação e lançamento de notas fiscais, integrando-se com o sistema contábil e reduzindo o tempo de processamento em 90%.'
+      solucao: 'Implementamos um sistema que automatiza a captura, validação e lançamento de notas fiscais, integrando-se com o sistema contábil e reduzindo o tempo de processamento em 90%.',
+      link: '',
+      git: ''
     },
     {
       id: '04',
-      title: 'Automatização de Relatórios',
+      title: 'Automatização de Relatórios Ambientais',
       description: 'Solução responsável por automatizar a geração de relatórios de projetos ambientais. Utiliza técnicas de substituição de variáveis para criar relatórios personalizados e eficientes.',
       technologies: ['Streamlit', 'Python', 'Docx', 'Pandas'],
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
       textColor: 'text-white',
       problema: 'Geração manual de relatórios ambientais era extremamente demorada, com necessidade de edição repetitiva de documentos e alto risco de inconsistências entre versões.',
-      solucao: 'Desenvolvemos uma aplicação web que gera relatórios personalizados automaticamente a partir de dados estruturados, permitindo customização rápida e entrega em minutos ao invés de horas.'
+      solucao: 'Desenvolvemos uma aplicação web que gera relatórios personalizados automaticamente a partir de dados estruturados, permitindo customização rápida e entrega em minutos ao invés de horas.',
+      link: '',
+      git: ''
+    },
+     {
+      id: '05',
+      title: 'Plataforma de Georeferenciamento',
+      description: 'Solução responsável por automatizar a analise de sobreposição de áreas geoográficas de propriedades, terras indígenas, e outros objetos geográficos. Utiliza técnicas de geoprocessamento para identificar conflitos e sobreposições, fornecendo relatórios detalhados e visualizações interativas.',
+      technologies: ['Django', 'PostgreSQL', 'GeoDjango', 'Pandas'],
+      bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
+      textColor: 'text-white',
+      problema: 'Identificação manual de conflitos de sobreposição de áreas geoográficas era demorada e propensa a erros, resultando em inconsistências nos registros contábeis.',
+      solucao: 'Desenvolvemos uma plataforma que automatiza a análise de sobreposição, fornecendo relatórios detalhados e visualizações interativas, permitindo uma gestão mais eficiente e precisa dos objetos geográficos.',
+      link: '',
+      git: ''
     }
   ];
 
@@ -95,8 +115,8 @@ const ProjectsSection = () => {
               projectId={project.id}
               problema={project.problema}
               solucao={project.solucao}
-              onExternalClick={() => console.log('External link clicked')}
-              onGithubClick={() => console.log('GitHub link clicked')}
+              onExternalClick={(event) => window.open(project.link, '_blank') && event.stopPropagation()}
+              onGithubClick={(event) => window.open(project.git, '_blank') && event.stopPropagation()}
             />
           ))}
         </div>
