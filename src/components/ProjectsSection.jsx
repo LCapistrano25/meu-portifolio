@@ -67,14 +67,18 @@ const ProjectsSection = () => {
 
   const additionalProjects = [
     {
-      title: 'Automações de Processos',
-      description: 'Desenvolvimento de scripts e automações para otimizar processos empresariais, reduzindo tempo e aumentando a eficiência operacional.',
-      technologies: ['Python', 'Pandas', 'Automação']
+      title: 'API de Predição de Valor de Carro',
+      description: 'Desenvolvimento de um modelo de predição de valor de carros baseado em dados históricos e características do veículo. Utiliza técnicas de machine learning para fornecer previsões precisas e ajudar os usuários a tomar decisões informadas sobre compras e vendas de veículos.',
+      technologies: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib', 'NumPy'],
+      git: 'https://github.com/LCapistrano25/API_FIPE',
+      link: 'https://colab.research.google.com/drive/1fOE4rKyNI0M5bBQaPE2lnsgPoXRbQnIO?usp=sharing'
     },
     {
-      title: 'APIs REST',
-      description: 'Criação de APIs robustas e escaláveis para comunicação entre aplicações, seguindo as melhores práticas de desenvolvimento backend.',
-      technologies: ['Python', 'Django', 'REST Framework']
+      title: 'Leitor de E-mails',
+      description: 'Desenvolvimento de um leitor de Emails para capturar e organizar Notas Fiscais de Terceiros, facilitando o processo de gerenciamento e análise de documentos.',
+      technologies: ['Python', 'Pdf2image', 'Imap_tools', 'Pandas'],
+      git: 'https://github.com/LCapistrano25/read_emails',
+      link: ''
     }
   ];
 
@@ -88,7 +92,7 @@ const ProjectsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white border-4 border-black rounded-full px-6 py-3 font-bold shadow-[4px_4px_0px_0px_#000000] mb-8">
-            <Star className="w-5 h-5 text-yellow-500" />
+            <span className="text-xl">⚡</span>
             Projetos Principais
             <span className="text-xl">⚡</span>
           </div>
@@ -134,6 +138,8 @@ const ProjectsSection = () => {
                 title={project.title}
                 description={project.description}
                 technologies={project.technologies}
+                onExternalClick={project.link ? (event) => window.open(project.link, '_blank') && event.stopPropagation() : null}
+                onGithubClick={project.git ? (event) => window.open(project.git, '_blank') && event.stopPropagation() : null}
               />
             ))}
           </div>

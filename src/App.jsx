@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection />
-      <AboutSection />
+      <AboutSection birthDate="2005-02-25" />
       <SkillsSection />
       <ProjectsSection />
       <ExperienceSection />

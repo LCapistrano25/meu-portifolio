@@ -1,6 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import profileImg from '@/assets/meu.jpg';
+
+const socialLinks = [
+  { icon: faGithub, url: 'https://github.com/LCapistrano25' },
+  { icon: faLinkedin, url: 'https://www.linkedin.com/in/leonardo-capistrano-193618284/' },
+  { icon: faWhatsapp, url: 'https://wa.me/5563999540585' },
+];
 
 const HeroSection = () => {
   const scrollToSection = (sectionId) => {
@@ -41,7 +48,6 @@ const HeroSection = () => {
                 <span className="gradient-text">Leonardo</span>
                 <br />
                 <span className="gradient-text">Capistrano</span>
-                <span className="text-black">|</span>
               </h1>
               
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)]">
@@ -80,14 +86,14 @@ const HeroSection = () => {
             
             {/* Social Links */}
             <div className="flex gap-4">
-              <a href="#" className="w-16 h-16 border-4 border-black rounded-2xl flex items-center justify-center text-2xl transition-all duration-200 shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] bg-[var(--primary)]">
-                <FontAwesomeIcon icon={faGithub} className="w-8 h-8 text-white" />
+              <a href={socialLinks[0].url} target="_blank" rel="noopener noreferrer" className="w-16 h-16 border-4 border-black rounded-2xl flex items-center justify-center text-2xl transition-all duration-200 shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] bg-[var(--primary)]">
+                <FontAwesomeIcon icon={socialLinks[0].icon} className="w-8 h-8 text-white" />
               </a>
-              <a href="#" className="w-16 h-16 border-4 border-black rounded-2xl flex items-center justify-center text-2xl transition-all duration-200 shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] bg-[var(--secondary)]">
-                <FontAwesomeIcon icon={faLinkedin} className="w-8 h-8 text-white" />
+              <a href={socialLinks[1].url} target="_blank" rel="noopener noreferrer" className="w-16 h-16 border-4 border-black rounded-2xl flex items-center justify-center text-2xl transition-all duration-200 shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] bg-[var(--secondary)]">
+                <FontAwesomeIcon icon={socialLinks[1].icon} className="w-8 h-8 text-white" />
               </a>
-              <a href="#" className="w-16 h-16 border-4 border-black rounded-2xl flex items-center justify-center text-2xl transition-all duration-200 shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] bg-[var(--accent)]">
-                <FontAwesomeIcon icon={faXTwitter} className="w-8 h-8 text-white" />
+              <a href={socialLinks[2].url} target="_blank" rel="noopener noreferrer" className="w-16 h-16 border-4 border-black rounded-2xl flex items-center justify-center text-2xl transition-all duration-200 shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] bg-[var(--accent)]">
+                <FontAwesomeIcon icon={socialLinks[2].icon} className="w-8 h-8 text-white" />
               </a>
             </div>
           </div>
@@ -96,8 +102,8 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Decorative frame */}
-              <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_#000000] transition-all duration-200 hover:shadow-[12px_12px_0px_0px_#000000] hover:translate-x-[-2px] hover:translate-y-[-2px] w-80 h-80 flex items-center justify-center">
-                <img src="/src/assets/meu.jpg" alt="Foto de Leonardo Capistrano" className="w-32 h-32 rounded-full" />
+              <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_#000000] transition-all duration-200 hover:shadow-[12px_12px_0px_0px_#000000] hover:translate-x-[-2px] hover:translate-y-[-2px] w-80 h-80 overflow-hidden">
+                <img src={profileImg} alt="Foto de Leonardo Capistrano" className="w-full h-full object-cover object-center" loading="lazy" />
               </div>
               
               {/* Decorative circles around the frame */}

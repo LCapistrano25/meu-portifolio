@@ -1,21 +1,23 @@
 import { Heart, CheckCircle, Target, Zap, Bot, User, Star } from 'lucide-react';
 import { StatCard, EmojiCard } from './ui/brutalist-card';
+import { calculateAge } from "@/lib/utils"
 
-const AboutSection = () => {
+const AboutSection = ({ birthDate }) => {
+  const age = calculateAge(birthDate)
   const stats = [
     {
       icon: <Target className="w-8 h-8 text-[var(--primary)]" />,
-      number: "2+",
+      number: "4+",
       label: "Projetos Principais"
     },
     {
       icon: <Zap className="w-8 h-8 text-[var(--primary)]" />,
-      number: "2+",
+      number: "1+",
       label: "Anos de Experiência"
     },
     {
       icon: <Heart className="w-8 h-8 text-[var(--primary)]" />,
-      number: "19",
+      number: String(age ?? ""),
       label: "Anos de Idade"
     },
     {
@@ -36,7 +38,7 @@ const AboutSection = () => {
     },
     {
       icon: "🚀",
-      text: "Desenvolvedor Junior na Fourmaq - Soluções em Agronegócio"
+      text: "Atuando como Freelancer atualmente"
     },
     {
       icon: "🎓",
@@ -64,7 +66,7 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              Sou um desenvolvedor Backend dedicado com 19 anos, natural de Goiânia. 
+              Sou um desenvolvedor Backend dedicado com {age ?? ""} anos, natural de Goiânia. 
               Concluí o ensino médio no Instituto Federal do Tocantins e atualmente curso 
               Engenharia de Software pela Universidade Católica do Tocantins. Especializo-me 
               em Python e Django, focando na criação de APIs e automações de processos.

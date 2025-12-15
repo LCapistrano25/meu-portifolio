@@ -4,6 +4,18 @@ import { ExperienceCard } from './ui/brutalist-card';
 const ExperienceSection = () => {
   const experiences = [
     {
+      title: 'Freelancer',
+      company: 'Atuando independentemente',
+      period: 'Out 2025 - Atual',
+      location: 'Tocantins, Brasil',
+      description: 'Desenvolvimento de soluções backend em Python, Django e Playwright.',
+      achievements: [
+        'Atuando em projetos independentes',
+        'Criou plataforma de Georeferenciamento'
+      ],
+      color: 'bg-[var(--primary)]'
+    },
+    {
       title: 'Desenvolvedor Junior',
       company: 'Fourmaq - Soluções em Agronegócio',
       period: 'Mai 2024 – Out 2025',
@@ -120,9 +132,14 @@ const ExperienceSection = () => {
               Vamos criar algo incrível juntos. Estou sempre animado para aceitar novos desafios e construir soluções inovadoras.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="bg-white text-[var(--primary)] px-8 py-4 rounded-2xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all">
+              <a
+                href="https://wa.me/5563999540585"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-[var(--primary)] px-8 py-4 rounded-2xl font-bold border-4 border-black shadow-[4px_4px_0px_0px_#000000] hover:shadow-[6px_6px_0px_0px_#000000] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all"
+              >
                 Entre em Contato
-              </button>
+              </a>
               <button className="bg-transparent border-4 border-white text-white px-8 py-4 rounded-2xl font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all">
                 Ver Currículo
               </button>
