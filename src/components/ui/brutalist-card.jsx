@@ -107,18 +107,21 @@ const SkillCard = React.forwardRef(({
 
 SkillCard.displayName = "SkillCard";
 
-const ProjectCard = React.forwardRef(({ 
+const ProjectCard = React.forwardRef(({
   title,
   description,
   technologies = [],
   bgColor,
   textColor,
   projectId,
+  problema,
+  solucao,
   onExternalClick,
   onGithubClick,
   className,
   ...props 
 }, ref) => {
+  const [isExpanded, setIsExpanded] = React.useState(false);
   return (
     <BrutalistCard 
       ref={ref}
@@ -191,7 +194,7 @@ const ProjectCard = React.forwardRef(({
             {description}
           </p>
           
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-6">
             {technologies.map((tech, techIndex) => (
               <span
                 key={techIndex}
@@ -201,6 +204,44 @@ const ProjectCard = React.forwardRef(({
               </span>
             ))}
           </div>
+
+          {/* Expandable Details Section */}
+          {(problema || solucao) && (
+            <div className="mt-6 border-t-4 border-black pt-6">
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="flex items-center gap-3 font-bold text-lg hover:text-[var(--primary)] transition-colors mb-4"
+              >
+                <span>Detalhes do Projeto</span>
+                <svg
+                  className={`w-6 h-6 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+
+              {/* Expanded Content */}
+              {isExpanded && (
+                <div className="space-y-6 animate-in fade-in duration-300">
+                  {problema && (
+                    <div className="bg-[#f5f5f5] border-2 border-black rounded-xl p-4">
+                      <h4 className="font-black text-lg mb-3 text-[var(--primary)]">Problema</h4>
+                      <p className="text-gray-700 leading-relaxed">{problema}</p>
+                    </div>
+                  )}
+                  {solucao && (
+                    <div className="bg-[#f5f5f5] border-2 border-black rounded-xl p-4">
+                      <h4 className="font-black text-lg mb-3 text-[var(--primary)]">Solução</h4>
+                      <p className="text-gray-700 leading-relaxed">{solucao}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </BrutalistCard>

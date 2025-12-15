@@ -9,7 +9,9 @@ const ProjectsSection = () => {
       description: 'Sistema de automação para otimizar o processo de montagem de planilhas para plano de saúde. Extrai e organiza automaticamente dados de arquivos PDF, tornando o processo mais ágil e preciso.',
       technologies: ['Python', 'Pandas', 'NumPy', 'PDF Processing'],
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
-      textColor: 'text-white'
+      textColor: 'text-white',
+      problema: 'Processo manual e demorado de montagem de planilhas para planos de saúde, com alta taxa de erros humanos e consumo excessivo de tempo operacional.',
+      solucao: 'Desenvolvemos um sistema automatizado que extrai dados de PDFs, processa as informações e monta as planilhas automaticamente, reduzindo o tempo em 80% e eliminando erros de digitação.'
     },
     {
       id: '02',
@@ -17,7 +19,9 @@ const ProjectsSection = () => {
       description: 'Solução inovadora para sistema de reservas de máquinas. Permite reservas pelo celular com gestão ágil e eficiente pela plataforma web, organizando todo o processo para o agronegócio.',
       technologies: ['Python', 'Django', 'Flutter Flow', 'Bubble', 'APIs REST'],
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
-      textColor: 'text-white'
+      textColor: 'text-white',
+      problema: 'Gestão manual de reservas de máquinas agrícolas causava conflitos de agendamento, perda de dados e dificuldade de acesso para usuários remotos.',
+      solucao: 'Criamos uma plataforma integrada com app mobile para reservas e painel web para gestão, permitindo controle centralizado, notificações em tempo real e histórico completo de utilizações.'
     },
     {
       id: '03',
@@ -25,7 +29,9 @@ const ProjectsSection = () => {
       description: 'Solução responsável por automatizar e gerenciar o lançamento de notas fiscais. Facilita o gerencimaneto de notas fiscais emitidas por terceitos, otimizando o processo para o setor do agronegócio.',
       technologies: ['Django', 'Python', 'Playwright', 'APIs REST'],
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
-      textColor: 'text-white'
+      textColor: 'text-white',
+      problema: 'Lançamento manual de notas fiscais de terceiros era propenso a erros, demorado e criava inconsistências nos registros contábeis da empresa.',
+      solucao: 'Implementamos um sistema que automatiza a captura, validação e lançamento de notas fiscais, integrando-se com o sistema contábil e reduzindo o tempo de processamento em 90%.'
     },
     {
       id: '04',
@@ -33,7 +39,9 @@ const ProjectsSection = () => {
       description: 'Solução responsável por automatizar a geração de relatórios de projetos ambientais. Utiliza técnicas de substituição de variáveis para criar relatórios personalizados e eficientes.',
       technologies: ['Streamlit', 'Python', 'Docx', 'Pandas'],
       bgColor: 'bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]',
-      textColor: 'text-white'
+      textColor: 'text-white',
+      problema: 'Geração manual de relatórios ambientais era extremamente demorada, com necessidade de edição repetitiva de documentos e alto risco de inconsistências entre versões.',
+      solucao: 'Desenvolvemos uma aplicação web que gera relatórios personalizados automaticamente a partir de dados estruturados, permitindo customização rápida e entrega em minutos ao invés de horas.'
     }
   ];
 
@@ -85,6 +93,8 @@ const ProjectsSection = () => {
               bgColor={project.bgColor}
               textColor={project.textColor}
               projectId={project.id}
+              problema={project.problema}
+              solucao={project.solucao}
               onExternalClick={() => console.log('External link clicked')}
               onGithubClick={() => console.log('GitHub link clicked')}
             />
