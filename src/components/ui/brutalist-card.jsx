@@ -167,7 +167,7 @@ const ProjectCard = React.forwardRef(({
               {onExternalClick && (
                 <button 
                   onClick={onExternalClick}
-                  className="w-10 h-10 bg-[#00bcd4] border-2 border-black rounded-lg flex items-center justify-center hover:shadow-[4px_4px_0px_0px_#000000] transition-all"
+                  className="w-10 h-10 bg-[var(--primary)] border-2 border-black rounded-lg flex items-center justify-center hover:shadow-[4px_4px_0px_0px_#000000] transition-all"
                 >
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -195,7 +195,7 @@ const ProjectCard = React.forwardRef(({
             {technologies.map((tech, techIndex) => (
               <span
                 key={techIndex}
-                className="px-3 py-1 bg-[#a8f0dc] border-2 border-black rounded-full text-sm font-bold"
+                className="px-3 py-1 bg-[#e8e8e8] border-2 border-black rounded-full text-sm font-bold"
               >
                 {tech}
               </span>
@@ -227,7 +227,7 @@ const FeatureCard = React.forwardRef(({
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-lg font-bold mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
-      <div className="w-12 h-1 bg-[#00bcd4] mx-auto mt-4"></div>
+      <div className="w-12 h-1 bg-[var(--primary)] mx-auto mt-4"></div>
     </BrutalistCard>
   );
 });
@@ -255,7 +255,7 @@ const SimpleProjectCard = React.forwardRef(({
         {technologies.map((tech, techIndex) => (
           <span
             key={techIndex}
-            className="px-3 py-1 bg-[#e3f2fd] border-2 border-[#2196f3] rounded-full text-sm font-bold text-[#2196f3]"
+            className="px-3 py-1 bg-[#f5f5f5] border-2 border-[#d4af37] rounded-full text-sm font-bold text-[#d4af37]"
           >
             {tech}
           </span>
@@ -271,7 +271,7 @@ const StatCard = React.forwardRef(({
   icon,
   number,
   label,
-  bgColor = "bg-[#a8f0dc]",
+  bgColor = "bg-[#e8e8e8]",
   className,
   ...props 
 }, ref) => {
@@ -321,7 +321,7 @@ const ExperienceCard = React.forwardRef(({
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
         <div>
           <h3 className="text-2xl font-black mb-2">{title}</h3>
-          <h4 className="text-xl font-bold text-[#00bcd4] mb-2">{company}</h4>
+          <h4 className="text-xl font-bold text-[var(--primary)] mb-2">{company}</h4>
         </div>
         
         <div className="flex flex-col lg:items-end gap-2">
@@ -352,7 +352,7 @@ const ExperienceCard = React.forwardRef(({
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
             {achievements.map((achievement, achIndex) => (
               <div key={achIndex} className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#00bcd4] rounded-full"></div>
+                <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
                 <span className="text-sm text-gray-700">{achievement}</span>
               </div>
             ))}
@@ -366,7 +366,7 @@ const ExperienceCard = React.forwardRef(({
           {technologies.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="px-3 py-1 bg-[#e3f2fd] border-2 border-[#2196f3] rounded-full text-sm font-bold text-[#2196f3]"
+              className="px-3 py-1 bg-[#f5f5f5] border-2 border-[#d4af37] rounded-full text-sm font-bold text-[#d4af37]"
             >
               {tech}
             </span>
@@ -381,7 +381,7 @@ ExperienceCard.displayName = "ExperienceCard";
 
 const EmojiCard = React.forwardRef(({ 
   emoji,
-  bgColor = "bg-[#2196f3]",
+  bgColor = "bg-[var(--primary)]",
   size = "w-32 h-32",
   emojiSize = "text-6xl",
   className,
