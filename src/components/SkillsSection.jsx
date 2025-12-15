@@ -57,7 +57,23 @@ const SkillsSection = () => {
         levelColor: 'bg-[var(--accent)]',
         description: 'Computação científica e arrays',
         stars: 3
-      }
+      },
+      {
+        icon: '🔧',
+        name: 'Playwright',
+        level: 'Intermediário',
+        levelColor: 'bg-[var(--accent)]',
+        description: 'Automações de processos',
+        stars: 3
+      },
+      {
+        icon: '💻',
+        name: 'Streamlit',
+        level: 'Iniciante',
+        levelColor: 'bg-[var(--accent)]',
+        description: 'Aplicações web interativas',
+        stars: 2
+      },
     ],
     nocode: [
       {
@@ -111,6 +127,38 @@ const SkillsSection = () => {
         levelColor: 'bg-[var(--primary)]',
         description: 'Editor de código principal',
         stars: 4
+      },
+      {
+        icon: '🐋',
+        name: 'Docker',
+        level: 'Iniciante',
+        levelColor: 'bg-[var(--accent)]',
+        description: 'Containerização de aplicações',
+        stars: 3
+      },
+      {
+        icon: '🐘',
+        name: 'PostgreSQL',
+        level: 'Intermediário',
+        levelColor: 'bg-[var(--accent)]',
+        description: 'Banco de dados relacional',
+        stars: 3
+      },
+      {
+        icon: '🚀',
+        name: 'Postman',
+        level: 'Intermediário',
+        levelColor: 'bg-[var(--accent)]',
+        description: 'Testes de APIs',
+        stars: 3
+      },
+      {
+        icon: '📄',
+        name: 'Nginx',
+        level: 'Intermediário',
+        levelColor: 'bg-[var(--accent)]',
+        description: 'Servidor web e reverse proxy',
+        stars: 3
       }
     ]
   };

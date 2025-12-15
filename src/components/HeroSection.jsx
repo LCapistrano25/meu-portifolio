@@ -32,7 +32,7 @@ const HeroSection = () => {
             {/* Location badge */}
             <div className="inline-flex items-center gap-2 bg-[var(--primary)] border-4 border-black rounded-full px-6 py-3 font-bold shadow-[4px_4px_0px_0px_#000000] text-black">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="w-5 h-5" />
-              Goiânia, Brasil
+              Palmas, Brasil
             </div>
             
             {/* Main heading */}

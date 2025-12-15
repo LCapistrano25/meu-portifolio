@@ -6,7 +6,7 @@ const ExperienceSection = () => {
     {
       title: 'Desenvolvedor Junior',
       company: 'Fourmaq - Soluções em Agronegócio',
-      period: 'Mai 2024 – Presente',
+      period: 'Mai 2024 – Out 2025',
       location: 'Tocantins, Brasil',
       description: 'Desenvolvimento de soluções backend em Python e Django, criação de APIs REST e automações de processos para o setor do agronegócio.',
       achievements: [

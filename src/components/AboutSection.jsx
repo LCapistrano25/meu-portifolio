@@ -1,4 +1,4 @@
-import { Heart, CheckCircle, Target, Zap, Bot, User } from 'lucide-react';
+import { Heart, CheckCircle, Target, Zap, Bot, User, Star } from 'lucide-react';
 import { StatCard, EmojiCard } from './ui/brutalist-card';
 
 const AboutSection = () => {
@@ -55,7 +55,7 @@ const AboutSection = () => {
           {/* Left side - About content */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-white border-4 border-black rounded-full px-6 py-3 font-bold shadow-[4px_4px_0px_0px_#000000]">
-              <Heart className="w-5 h-5 text-[var(--primary)]" />
+              <Star className="w-5 h-5 text-[var(--primary)]" />
               Sobre Mim
             </div>
             
@@ -74,7 +74,7 @@ const AboutSection = () => {
             <div className="space-y-4">
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[var(--primary)] border-4 border-black rounded-full flex items-center justify-center text-xl">
+                  <div className="w-12 h-12 border-4 border-black rounded-full flex items-center justify-center text-xl">
                     {highlight.icon}
                   </div>
                   <p className="text-gray-700 font-medium">{highlight.text}</p>
