@@ -6,12 +6,21 @@ import { fileURLToPath } from 'url'
 const rootDir = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/portifolio/' : '/',
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(rootDir, "./src"),
+export default defineConfig(({ command }) => {
+  const isVercel = process.env.VERCEL === '1';
+  const base =
+    command === 'build'
+      ? isVercel
+        ? '/'
+        : '/portifolio/'
+      : '/';
+  return {
+    base,
+    plugins: [react(), tailwindcss()],
+    resolve: {
+      alias: {
+        "@": path.resolve(rootDir, "./src"),
+      },
     },
-  },
-}))
+  };
+})
